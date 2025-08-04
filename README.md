@@ -9,10 +9,6 @@ With the recommended configuration (Master: 16vCPU/64GB, Workers: 8vCPU/32GB eac
 - **RAM**: 160GB total (140+ GB available for applications)  
 - **Storage**: 550GB total (expandable with Longhorn)
 
-### **Application Capacity:**
-- **JupyterHub Users**: 30-50 concurrent users (4GB each)
-- **Harbor Projects**: Multiple projects with GB-scale storage
-- **Additional Applications**: Plenty of room for monitoring, CI/CD, etc.
 
 ### **High Availability:**
 - Can survive loss of any single worker node
@@ -24,8 +20,6 @@ With the recommended configuration (Master: 16vCPU/64GB, Workers: 8vCPU/32GB eac
 This tutorial will guide you through deploying a production-ready Kubernetes cluster using RKE2 on Ubuntu 24.04 with:
 - **RKE2**: Free, open-source Kubernetes distribution (Apache 2.0 License)
 - **Longhorn**: Cloud-native distributed block storage
-- **Harbor**: Enterprise-class container registry
-- **JupyterHub**: Multi-user Jupyter notebook platform
 
 ## Prerequisites
 
