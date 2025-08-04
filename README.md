@@ -1,12 +1,15 @@
 # Complete RKE2 Deployment Guide: Ubuntu 24.04 with Longhorn
 
 ## Expected Cluster Capacity to run DevOps, MLOps and GenAI Stacks:
-The CNCF landscape offers extensive ARM64-compatible tools specifically suited for DevOps, MLOps, and LLMOps workflows. Wikipedia +2 Kubeflow leads the MLOps platform category with full ARM64 support added in v1.8, requiring 8-16GB RAM and 4-8 CPU cores for complete deployment across your cluster. CNCFKubeflow
-Essential graduated projects include Prometheus for metrics collection (4-8GB RAM, 2-4 CPU), Argo Workflows for ML pipeline orchestration (256Mi RAM, 100m CPU), and Istio or Linkerd for service mesh capabilities. Cncf +2 Linkerd proves superior for Apple Silicon with significantly lower resource overhead compared to Istio, making it optimal for your 96GB constraint. Toptal +3
-Critical incubating projects enhance the ecosystem with OpenTelemetry for unified observability, Cortex for long-term metrics storage, and Kyverno for policy management. Cncf These tools collectively consume approximately 23GB RAM and 11 CPU cores, leaving substantial resources for actual ML workloads.
-The complete recommended stack includes monitoring (Prometheus + Grafana), logging (Fluentd), tracing (Jaeger), security (OPA + Falco), and storage orchestration (Rook), creating a production-ready environment that mirrors enterprise MLOps deployments while maintaining compatibility with Apple Silicon architecture.
+The CNCF landscape offers extensive ARM64-compatible tools specifically suited for DevOps, MLOps, and LLMOps workflows. 
+ Kubeflow leads the MLOps platform category with full ARM64 support added in v1.8, requiring 8-16GB RAM and 4-8 CPU cores for complete deployment across your cluster. 
+Essential graduated projects include Prometheus for metrics collection (4-8GB RAM, 2-4 CPU), Argo Workflows for ML pipeline orchestration (256Mi RAM, 100m CPU), and Istio or Linkerd for service mesh capabilities.
+Linkerd proves superior for Apple Silicon with significantly lower resource overhead compared to Istio, making it optimal for your 96GB constraint. Toptal +3
+Critical incubating projects enhance the ecosystem with OpenTelemetry for unified observability, Cortex for long-term metrics storage, and Kyverno for policy management. 
+These tools collectively consume approximately 23GB RAM and 11 CPU cores, leaving substantial resources for actual ML workloads.
+The complete recommended stack includes monitoring (Prometheus + Grafana), logging (Fluentd), tracing (Jaeger), security (OPA + Falco), and storage orchestration (Rook), creating a production-ready environment that mirrors enterprise MLOps deployments.
 
-With the recommended configuration (Master: 16vCPU/64GB, Workers: 8vCPU/32GB each):
+With the above stack in mind it is recommended to have a configuration of Master: 16vCPU/64GB and Workers: 8vCPU/32GB each
 
 ### **Total Resources:**
 - **vCPUs**: 48 total (40+ available for applications)
