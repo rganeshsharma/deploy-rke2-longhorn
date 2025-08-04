@@ -1,6 +1,6 @@
-# Complete RKE2 Deployment Guide: Ubuntu 24.04 with Longhorn, Harbor, and JupyterHub
+# Complete RKE2 Deployment Guide: Ubuntu 24.04 with Longhorn
 
-## Expected Cluster Capacity
+## Expected Cluster Capacity to run DevOps, MLOps and GenAI Stacks:
 
 With the recommended configuration (Master: 16vCPU/64GB, Workers: 8vCPU/32GB each):
 
